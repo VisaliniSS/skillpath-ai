@@ -133,14 +133,11 @@ AS $$
 BEGIN
   INSERT INTO public.profiles (user_id, full_name)
   VALUES (NEW.id, COALESCE(NEW.raw_user_meta_data->>'full_name', ''));
-  
   INSERT INTO public.user_roles (user_id, role)
   VALUES (NEW.id, 'student');
-  
   RETURN NEW;
 END;
 $$;
-
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
@@ -191,9 +188,9 @@ CREATE POLICY "Admins delete courses" ON public.courses FOR DELETE USING (public
 -- Recommendations
 CREATE POLICY "Users view own recommendations" ON public.recommendations FOR SELECT USING (auth.uid() = user_id OR public.has_role(auth.uid(), 'admin'));
 CREATE POLICY "System inserts recommendations" ON public.recommendations FOR INSERT WITH CHECK (public.has_role(auth.uid(), 'admin') OR auth.uid() = user_id);
-
 -- Course ratings
 CREATE POLICY "Users view own ratings" ON public.course_ratings FOR SELECT USING (auth.uid() = user_id OR public.has_role(auth.uid(), 'admin'));
 CREATE POLICY "Users insert own ratings" ON public.course_ratings FOR INSERT WITH CHECK (auth.uid() = user_id);
 CREATE POLICY "Users update own ratings" ON public.course_ratings FOR UPDATE USING (auth.uid() = user_id);
 CREATE POLICY "Users delete own ratings" ON public.course_ratings FOR DELETE USING (auth.uid() = user_id);
+
