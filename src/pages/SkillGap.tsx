@@ -528,25 +528,51 @@ export default function SkillGap() {
                       <span className="text-sm text-foreground w-40 truncate">
                         {d.skill}
                       </span>
-                      <div className="flex-1 bg-secondary rounded-full h-2 overflow-hidden">
+                      <div className="flex-1 relative bg-secondary rounded-full h-3 overflow-hidden">
+                        {/* Required level indicator */}
                         <div
-                          className="h-full rounded-full transition-all"
+                          className="absolute h-full rounded-full opacity-25"
+                          style={{
+                            width: `${d.required}%`,
+                            background: "hsl(var(--accent))",
+                          }}
+                        />
+                        {/* Current level */}
+                        <div
+                          className="relative h-full rounded-full transition-all"
                           style={{
                             width: `${d.current}%`,
                             background:
-                              d.gap > 30
-                                ? "hsl(var(--destructive))"
-                                : d.gap > 10
+                              d.gap === 0
+                                ? "hsl(var(--primary))"
+                                : d.gap < 30
                                   ? "hsl(var(--accent))"
-                                  : "hsl(var(--success))",
+                                  : "hsl(var(--destructive))",
                           }}
                         />
                       </div>
-                      <span className="text-xs font-mono text-muted-foreground w-12 text-right">
-                        {d.gap > 0 ? `-${d.gap}%` : "✓"}
-                      </span>
+                      <div className="text-right w-20">
+                        <span className="text-xs font-mono text-muted-foreground">
+                          {d.current}/{d.required}
+                        </span>
+                        {d.gap > 0 && (
+                          <span className="text-[10px] font-mono text-destructive block">
+                            -{d.gap}% gap
+                          </span>
+                        )}
+                        {d.gap === 0 && (
+                          <span className="text-[10px] font-mono text-primary block">
+                            ✓ met
+                          </span>
+                        )}
+                      </div>
                     </div>
                   ))}
+                {userSkills.length === 0 && (
+                  <p className="text-xs text-muted-foreground text-center pt-2 border-t border-border mt-3">
+                    ⬇ Add your skills below to see accurate gap analysis
+                  </p>
+                )}
               </div>
             ) : (
               <p className="text-sm text-muted-foreground py-8 text-center">
