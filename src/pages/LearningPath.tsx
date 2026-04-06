@@ -410,9 +410,7 @@ export default function LearningPath() {
         bio: "Demo user for development testing",
         avatar_url: null,
         created_at: new Date().toISOString(),
-        instructor_name: null,
-    thumbnail_url: null,
-    updated_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
       };
 
       const mockUserSkills = [
