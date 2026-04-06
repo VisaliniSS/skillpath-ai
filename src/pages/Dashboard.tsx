@@ -29,8 +29,8 @@ export default function Dashboard() {
     if (!user) return;
 
     const fetchData = async () => {
-      if (isMockUser(user)) {
-        // Mock data for development
+      if (false) {
+        // removed
         const mockProfile: Tables<"profiles"> = {
           id: "mock-profile-id",
           user_id: user.id,
