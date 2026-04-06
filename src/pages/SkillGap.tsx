@@ -361,6 +361,7 @@ export default function SkillGap() {
         variant: "destructive",
       });
     } else {
+      toast({ title: "Skill added successfully" });
       const { data } = await supabase
         .from("user_skills")
         .select("*, skills(*)")
