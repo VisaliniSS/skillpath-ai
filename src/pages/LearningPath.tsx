@@ -118,6 +118,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.88,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -136,6 +138,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.91,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -154,6 +158,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.85,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -178,6 +184,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.89,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -196,6 +204,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.82,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -220,6 +230,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.9,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -238,6 +250,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.92,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -256,6 +270,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.8,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -274,6 +290,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.75,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -297,6 +315,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.88,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -320,6 +340,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.83,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
   {
@@ -343,6 +365,8 @@ const COURSES_DATABASE: Tables<"courses">[] = [
     industry_alignment_score: 0.78,
     metadata: {},
     created_at: new Date().toISOString(),
+    instructor_name: null,
+    thumbnail_url: null,
     updated_at: new Date().toISOString(),
   },
 ];
@@ -386,7 +410,9 @@ export default function LearningPath() {
         bio: "Demo user for development testing",
         avatar_url: null,
         created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString(),
+        instructor_name: null,
+    thumbnail_url: null,
+    updated_at: new Date().toISOString(),
       };
 
       const mockUserSkills = [
