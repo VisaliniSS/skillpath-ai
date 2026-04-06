@@ -89,3 +89,7 @@ export function useAuth() {
   if (!ctx) throw new Error("useAuth must be used within AuthProvider");
   return ctx;
 }
+
+export function isMockUser(user: User | null): boolean {
+  return false; // Real auth - no mock users
+}
