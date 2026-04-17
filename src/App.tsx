@@ -10,6 +10,11 @@ import SkillGap from "./pages/SkillGap";
 import LearningPath from "./pages/LearningPath";
 import Courses from "./pages/Courses";
 import Admin from "./pages/Admin";
+import Advisor from "./pages/Advisor";
+import Quizzes from "./pages/Quizzes";
+import Projects from "./pages/Projects";
+import Insights from "./pages/Insights";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import { ReactNode } from "react";
 
@@ -43,6 +48,11 @@ const App = () => (
             <Route path="/skill-gap" element={<ProtectedRoute><SkillGap /></ProtectedRoute>} />
             <Route path="/learning-path" element={<ProtectedRoute><LearningPath /></ProtectedRoute>} />
             <Route path="/courses" element={<ProtectedRoute><Courses /></ProtectedRoute>} />
+            <Route path="/advisor" element={<ProtectedRoute><Advisor /></ProtectedRoute>} />
+            <Route path="/quizzes" element={<ProtectedRoute><Quizzes /></ProtectedRoute>} />
+            <Route path="/projects" element={<ProtectedRoute><Projects /></ProtectedRoute>} />
+            <Route path="/insights" element={<ProtectedRoute><Insights /></ProtectedRoute>} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>

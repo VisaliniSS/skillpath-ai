@@ -2,10 +2,10 @@ import { ReactNode, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import {
-  LayoutDashboard, BookOpen, Target, Route, Settings,
-  LogOut, ChevronLeft, ChevronRight, Brain, Shield, Menu, X
+  LayoutDashboard, BookOpen, Target, Route, MessageSquare,
+  LogOut, ChevronLeft, ChevronRight, Brain, Shield, Menu,
+  GraduationCap, FlaskConical, BarChart3, UserCog
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const studentNav = [
@@ -13,6 +13,11 @@ const studentNav = [
   { to: '/learning-path', icon: Route, label: 'Learning Path' },
   { to: '/skill-gap', icon: Target, label: 'Skill Gap' },
   { to: '/courses', icon: BookOpen, label: 'Courses' },
+  { to: '/advisor', icon: MessageSquare, label: 'AI Advisor' },
+  { to: '/quizzes', icon: GraduationCap, label: 'Assessments' },
+  { to: '/projects', icon: FlaskConical, label: 'Case Studies' },
+  { to: '/insights', icon: BarChart3, label: 'Insights' },
+  { to: '/profile', icon: UserCog, label: 'Profile' },
 ];
 
 const adminNav = [
