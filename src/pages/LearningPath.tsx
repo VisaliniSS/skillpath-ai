@@ -400,7 +400,7 @@ export default function LearningPath() {
 
     if (isMockUser(user)) {
       // Mock user data for development
-      const mockProfile: Tables<"profiles"> = {
+      const mockProfile = {
         id: "mock-profile-id",
         user_id: user.id,
         full_name: user.user_metadata?.full_name || "Demo User",

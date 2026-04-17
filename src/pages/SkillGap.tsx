@@ -92,7 +92,7 @@ export default function SkillGap() {
     const fetch = async () => {
       if (isMockUser(user)) {
         // Mock data for development
-        const mockProfile: Tables<"profiles"> = {
+        const mockProfile = {
           id: "mock-profile-id",
           user_id: user.id,
           full_name: user.user_metadata?.full_name || "Demo User",
