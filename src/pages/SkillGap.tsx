@@ -307,7 +307,7 @@ export default function SkillGap() {
           },
         ];
 
-        setProfile(mockProfile);
+        setProfile(mockProfile as any);
         setSelectedGoal(mockProfile.career_goal || "");
         setSkills(mockSkills);
         setUserSkills(mockUserSkills);

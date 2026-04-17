@@ -113,7 +113,7 @@ export default function Dashboard() {
           },
         ];
 
-        setProfile(mockProfile);
+        setProfile(mockProfile as any);
         setUserSkills(mockSkills);
         setRecommendations(mockRecommendations);
         setStats({

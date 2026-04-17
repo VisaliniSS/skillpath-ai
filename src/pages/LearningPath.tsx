@@ -440,7 +440,7 @@ export default function LearningPath() {
         },
       ];
 
-      setUserProfile(mockProfile);
+      setUserProfile(mockProfile as any);
       setUserSkills(mockUserSkills);
     } else {
       // Real database queries for production
